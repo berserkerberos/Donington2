@@ -30,7 +30,7 @@
 	<nav class="navbar navbar-expand-lg navbar-light fixed-top cabecera " id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="#page-top">
-			<a href="http://grupoolmos.com.ar/site/index.html">
+		<!--<a href="donington.com">-->
 						<img class="logo" src="../images/grupo_olmos-logo2.png" alt="" />
 			</a>					
 		</a>
@@ -60,7 +60,7 @@
 				<div class="row">
 					<div class="col-md-8">
 						<h1 class="titulo_banner">
-						Transferencia donington </br> Donington
+						Transferencias Donington </br>
 						</h1>					
 					</div>
 
@@ -131,7 +131,7 @@
 				<div class="row row-30">
 					<div class="col-md-7 ">
 						
-    					<a href="http://grupoolmos.com.ar/site/index.html">
+    					<a href="">
     						<img class="logo" src="../images/grupo_olmos-logo2.png" alt="" />
     					</a>
     							
