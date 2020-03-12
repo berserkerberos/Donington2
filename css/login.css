@@ -1,0 +1,230 @@
+
+.msg {
+	text-align: center;
+	font-size: 16px;
+	margin-bottom: 15px;
+}
+
+.cuerpo {
+	text-align: center;
+	background-image: url(../images/fondo.jpg);
+	background-color: #EBEBEB;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 100px;
+	height: 100vh;
+}
+
+.cuerpo2 {
+	text-align: center;
+	background-image: url(../images/fondo4.jpg);
+	background-color: #EBEBEB;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 25px;
+}
+
+.logo {
+	height: 120px;
+}
+
+.titulo_cab {
+	padding-top: 28px;
+	font-size: 35px;
+	min-height: 49px;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+	box-shadow: none;
+	background-color: transparent;
+	text-align: left;
+	font-size: 30px;
+	letter-spacing: -1px;
+	color: #3d3d3d;
+	font-family: open-sans, sans-serif;
+	font-weight: 800;
+}
+
+.titulo_banner {
+	text-shadow: 4px 3px 8px rgba(0, 0, 0, 0.5);
+	box-shadow: none;
+	background-color: transparent;
+	text-align: left;
+	font-size: 53px;
+	letter-spacing: -1px;
+	color: #FFFFFF;
+	font-family: open-sans, sans-serif;
+	font-weight: 800;
+	text-align: center;
+	padding-top: 25%;
+}
+
+.texto_banner {
+	font-family: open-sans, sans-serif;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+	color: #3d3d3d;
+	font-size: 20px;
+}
+
+.card-container {
+	padding: 30px;
+	margin-top: 12%;
+	margin-bottom: 50px;
+}
+
+.cajaDesctacado1 {
+	background-color: white;
+	box-shadow: 0 0 24px rgba(0, 0, 0, .4);
+	padding: 50px 90px;
+	color: #00306e;
+	opacity: 0.9;
+	text-align: left;
+}
+
+.texto_login {
+	text-align: left;
+}
+
+section {
+	margin-top: 50px;
+	min-height: 600px;
+}
+
+/*****FOOTER*********/
+.context-dark, .bg-gray-dark, .bg-primary {
+	color: black;
+}
+
+.footer-classic {
+	padding-top: 50px;
+}
+
+.footer-classic a, .footer-classic a:focus, .footer-classic a:active {
+	color: black;
+}
+
+.nav-list li {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.nav-list li a:hover:before {
+	margin-left: 0;
+	opacity: 1;
+	visibility: visible;
+}
+
+ul, ol {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.nav-list li a:before {
+	content: "\f14f";
+	font: 400 21px/1 "Material Design Icons";
+	color: #4d6de6;
+	display: inline-block;
+	vertical-align: baseline;
+	margin-left: -28px;
+	margin-right: 7px;
+	opacity: 0;
+	visibility: hidden;
+	transition: .22s ease;
+}
+
+/**************/
+/********* menu *********/
+#mainNav {
+	border-color: rgba(34, 34, 34, 0.05);
+	background-color: white;
+	-webkit-transition: all .35s;
+	-moz-transition: all .35s;
+	transition: all .35s;
+	font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+	font-weight: 200;
+	letter-spacing: 1px;
+}
+
+#mainNav .navbar-brand {
+	color: #fdcc52;
+	font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+	font-weight: 200;
+	letter-spacing: 1px;
+}
+
+#mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
+	color: #fcbd20;
+}
+
+#mainNav .navbar-toggler {
+	font-size: 20px;
+	padding: 8px 10px;
+	color: #222222;
+}
+
+#mainNav .navbar-nav>li>a {
+	font-size: 20px;
+	font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#mainNav .navbar-nav>li>a.active {
+	color: #fdcc52 !important;
+	background-color: transparent;
+}
+
+#mainNav .navbar-nav>li>a.active:hover {
+	background-color: transparent;
+}
+
+#mainNav .navbar-nav>li>a, #mainNav .navbar-nav>li>a:focus {
+	color: #222222;
+}
+
+#mainNav .navbar-nav>li>a:hover, #mainNav .navbar-nav>li>a:focus:hover {
+	color: #fdcc52;
+}
+
+@media ( min-width : 992px) {
+	#mainNav {
+		border-color: transparent;
+		background-color: transparent;
+	}
+	#mainNav .navbar-brand {
+		color: fade(white, 70%);
+	}
+	#mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
+		color: white;
+	}
+	#mainNav .navbar-nav>li>a, #mainNav .navbar-nav>li>a:focus {
+		
+	}
+	#mainNav .navbar-nav>li>a:hover, #mainNav .navbar-nav>li>a:focus:hover {
+		color: white;
+	}
+	#mainNav.navbar-shrink {
+		border-color: rgba(34, 34, 34, 0.1);
+		background-color: white;
+		box-shadow: 0px 5px 19px 0px rgba(0, 0, 0, 0.75);
+	}
+	#mainNav.navbar-shrink .navbar-brand {
+		color: #222222;
+	}
+	#mainNav.navbar-shrink .navbar-brand:hover, #mainNav.navbar-shrink .navbar-brand:focus
+		{
+		color: #fdcc52;
+	}
+	#mainNav.navbar-shrink .navbar-nav>li>a, #mainNav.navbar-shrink .navbar-nav>li>a:focus
+		{
+		color: #222222;
+	}
+	#mainNav.navbar-shrink .navbar-nav>li>a:hover, #mainNav.navbar-shrink .navbar-nav>li>a:focus:hover
+		{
+		color: #fdcc52;
+	}
+}
+
+/********************/
