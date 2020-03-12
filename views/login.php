@@ -137,27 +137,26 @@
     							
 						
 						<!-- Rights-->
-						<p class="rights">© Copyright 2018. Todos los derechos reservados.</p>
+						<p class="rights">© Copyright 2020. Todos los derechos reservados.</p>
 
 					</div>
 					<div class="col-md-5">
 						<h5>Contactos</h5>
 						<dl class="contact-list">
-							<dt>Dirección:</dt>
-							<dd>Azopardo 1405. PISO 10°. (C1107ADY)</dd>
+							
 							<dd>Ciudad Autónoma de Buenos Aires. Argentina.</dd>
 						</dl>
 						<dl class="contact-list">
 							<dt>Correo electrónico:</dt>
 							<dd>
-								<a href="mailto:#">dkstudioin@gmail.com</a>
+								<a href="mailto:#">@gmail.com</a>
 							</dd>
 						</dl>
 						<dl class="contact-list">
 							<dt>Telefonos:</dt>
 							<dd>
-								<a href="tel:#">+91 7568543012</a> <span>or</span> <a
-									href="tel:#">+91 9571195353</a>
+								<a href="tel:#"></a> <span>or</span> <a
+									href="tel:#"></a>
 							</dd>
 						</dl>
 					</div>
