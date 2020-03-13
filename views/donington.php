@@ -86,18 +86,14 @@ $(function(){
                     <label for="">Alias Cbu Credito</label>
                     <input type="text" name="txAliasCbuCred" class="form-control" maxlength="22"  minlength="22" placeholder="22 caracteres" >
                      
-                </div>
-                <div class="col-sm-4">
-                    <label for="">Importe</label>
-                    <input type="number" name="txImporte" class="form-control" maxlength="20"  minlength="20" placeholder="22 caracteres" >
-                </div>
+                
                 <div class="col-sm-4">
                     <label for="">Concepto</label>
                     <input type="text" name="txConcepto" class="form-control" maxlength="50"  minlength="50" placeholder="50 caracteres" >
                 </div>
                 <div class="col-sm-4">
                     <label for="">Motivo</label>
-                    <input type="text" name="txMotivo" class="form-control" maxlength="20"  minlength="20" placeholder="100 caracteres" >
+                    <input type="text" name="txMotivo" class="form-control" maxlength="3"  minlength="3" placeholder="3 caracteres" >
                 </div>
                 <div class="col-sm-4">
                     <label for="">Referencia</label>
