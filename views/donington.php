@@ -86,6 +86,7 @@ $(function(){
                     <label for="">Alias Cbu Credito</label>
                     <input type="text" name="txAliasCbuCred" class="form-control" maxlength="22"  minlength="22" placeholder="22 caracteres" >
                      
+                </div>
                 
                 <div class="col-sm-4">
                     <label for="">Concepto</label>
