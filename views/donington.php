@@ -50,8 +50,9 @@ $(function(){
             
             <div class="row">
                 <div class="col-sm-3">
-                    <label for="">N° Lote</label>
-                    <input type="number" name="txNumEntrega" class="form-control" >
+                    <label for="">Indicar N°de entrega</label>
+                    <input type="number" name="txNumEntrega" class="form-control" maxlength="12"  minlength="12" placeholder="N° Entrega" >
+                     
                 </div>
                 <div class="col-sm-3">
                     <label for="">Fecha</label>
@@ -83,7 +84,7 @@ $(function(){
                 
                 <div class="col-sm-4">
                     <label for="">Alias Cbu Credito</label>
-                    <input type="text" name="txAliasCbuCred" class="form-control" maxlength="20"  minlength="20" placeholder="22 caracteres" >
+                    <input type="text" name="txAliasCbuCred" class="form-control" maxlength="22"  minlength="22" placeholder="22 caracteres" >
                      
                 </div>
                 <div class="col-sm-4">
@@ -92,7 +93,7 @@ $(function(){
                 </div>
                 <div class="col-sm-4">
                     <label for="">Concepto</label>
-                    <input type="text" name="txConcepto" class="form-control" maxlength="20"  minlength="20" placeholder="50 caracteres" >
+                    <input type="text" name="txConcepto" class="form-control" maxlength="50"  minlength="50" placeholder="50 caracteres" >
                 </div>
                 <div class="col-sm-4">
                     <label for="">Motivo</label>
@@ -100,11 +101,11 @@ $(function(){
                 </div>
                 <div class="col-sm-4">
                     <label for="">Referencia</label>
-                    <input type="text" name="txReferencia" class="form-control" maxlength="20"  minlength="20" placeholder="30 caracteres" >
+                    <input type="text" name="txReferencia" class="form-control" maxlength="12"  minlength="12" placeholder="12 caracteres" >
                 </div>
                 <div class="col-sm-4">
                     <label for="">Email</label>
-                    <input type="email" name="txEmail" class="form-control" maxlength="20"  minlength="20" placeholder="50 caracteres" >
+                    <input type="email" name="txEmail" class="form-control" maxlength="40"  minlength="40" placeholder="50 caracteres" >
                 </div>
                 <div class="col-sm-4">
                     <label for="">Importe</label>
