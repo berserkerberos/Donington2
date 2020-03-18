@@ -55,7 +55,7 @@ $(function(){
                       <option value="0">--Seleccionar--</option>
                       <?php                        
                         foreach ($entr as $key => $value) {                          
-                          echo '<option value="'.$value["entrega"].'" >'.$value["entrega"].'</option>';
+                          echo '<option '.($entrega == $value["entrega"] ? "selected" : "" ) .' value="'.$value["entrega"].'" >'.$value["entrega"].'</option>';
                         }
                       ?>
                   </select>    

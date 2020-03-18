@@ -12,9 +12,9 @@ try {
             
             
             case "descarga_entre":
-                $entrega = (isset($_REQUEST["entrega"]) ? $_REQUEST["entrega"] : 0);
+                $entrega = (isset($_REQUEST["entrega"]) ? $_REQUEST["entrega"] : 0);                
                 $svrdonington = ServiceFactory::getService('donington');                                       
-                $trans = $svrdonington->consultarTransferencia($entrega) ;
+                $trans = $svrdonington->consultarTransferencia($entrega) ;                                
                 Helper::escribirCSV($trans,"archivo_nombre.csv",false);
                 exit;
                 //$entr  = $svrdonington->traerEntregas() ;
