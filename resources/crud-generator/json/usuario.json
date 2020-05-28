@@ -1,0 +1,94 @@
+{
+    "fields": [
+        {
+            "name": "nombre",
+            "type": "string"
+        },
+        {
+            "name": "nombre_completo",
+            "type": "string"
+        },
+        {
+            "name": "password",
+            "type": "password"
+        },
+        {
+            "name": "avatar",
+            "type": "file"
+        },
+        {
+            "name": "usu_verificado",
+            "type": "datetime"
+        },
+        {
+            "name": "tipo",
+            "type": "integer"
+        },
+        {
+            "name": "direccion",
+            "type": "string"            
+        },
+        {
+            "name": "localidad",
+            "type": "string"            
+        },
+        {
+            "name": "mail",
+            "type": "string"            
+        },
+        {
+            "name": "telefono",
+            "type": "string"            
+        },
+        {
+            "name": "observacion",
+            "type": "text"            
+        }        
+    ],
+    "validations": [
+        {
+            "field": "nombre",
+            "rules": "required|max:60"
+        },
+        {
+            "field": "nombre_completo",
+            "rules": "required|max:60"
+        },
+        {
+            "field": "password",
+            "rules": "required"
+        },        
+        {
+            "field": "tipo",
+            "rules": "required"
+        },
+        {
+            "field": "direccion",
+            "rules": "required"
+        },
+        {
+            "field": "mail",
+            "rules": "required"
+        },
+        {
+            "field": "localidad",
+            "rules": "required"
+        },
+        {
+            "field": "telefono",
+            "rules": "required"
+        },
+        {
+            "field": "observacion",
+            "rules": "required"
+        }
+
+    ],
+    "relationships": [
+        {
+            "name": "cliente",
+            "type": "belongsTo",
+            "class": "Cliente"
+        }       
+    ]
+}

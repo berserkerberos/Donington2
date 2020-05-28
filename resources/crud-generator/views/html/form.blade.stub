@@ -1,0 +1,9 @@
+
+<div class="row">
+    %%formFieldsHtml%%
+    <div class="col-md-12">
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit" value=""><?php echo  ($formMode === 'edit' ? 'Modificar <i class="far fa-save"></i>' : 'Crear <i class="far fa-save"></i>'); ?></button>            
+        </div>
+    </div>
+</div>

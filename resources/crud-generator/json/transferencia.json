@@ -1,0 +1,69 @@
+{
+    "fields": [
+        {
+            "name": "entrega",
+            "type": "integer"
+        },
+        {
+            "name": "fecha",
+            "type": "date"
+        },
+        {
+            "name": "cbu_debito",
+            "type": "string"
+        },
+        {
+            "name": "cbu_credito",
+            "type": "string"
+        },
+        {
+            "name": "alias_cbu_debito",
+            "type": "string"
+        },
+        {
+            "name": "alias_cbu_credito",
+            "type": "string"
+        },
+        {
+            "name": "importe",
+            "type": "decimal"            
+        },
+        {
+            "name": "concepto",
+            "type": "string"            
+        },
+        {
+            "name": "motivo",
+            "type": "text"            
+        },
+        {
+            "name": "referencia",
+            "type": "string"            
+        },
+        {
+            "name": "email",
+            "type": "string"            
+        },
+        {
+            "name": "titulares",
+            "type": "string"            
+        }                
+    ],
+    "validations": [
+        {
+            "field": "entrega",
+            "rules": "required|max:60"
+        },
+        {
+            "field": "fecha",
+            "rules": "required|max:60"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "cliente",
+            "type": "belongsTo",
+            "class": "Cliente"
+        }       
+    ]
+}
