@@ -10,19 +10,19 @@
 |
 */
 Route::get('/', function () {
-//    session_start();
+    //    session_start();
     header('location: ingreso');
     exit;
 });
 
 /********* DEMOS */
-Route::get('ejem/demo', function(){
+Route::get('ejem/demo', function () {
     return view('ejem/demo');
 });
-Route::get('ejem/iconos', function(){
+Route::get('ejem/iconos', function () {
     return view('ejem/iconos');
 });
-Route::get('msgError', function(){
+Route::get('msgError', function () {
     return view('frmMsgError');
 });
 
@@ -33,25 +33,24 @@ Route::get('/ingreso', 'loginController@login')
 Route::get('/cerrarSession', 'loginController@logout');
 
 Route::post('/validaUsuario', 'loginController@validaUsuario')
-->name("padron.validaUsuario");
+    ->name("padron.validaUsuario");
 
 
 /*Todos*/
 Route::group(['middleware' => "valPermisos:1_2_3"], function () {
     /*Rutas para todos**/
     Route::get('/inicio', 'loginController@inicio')
-        ->name("padron.inicio");    
+        ->name("padron.inicio");
     /* actualizacion de usuario **/
     Route::get('/configUsu', 'loginController@configUsu')
-        ->name("padron.configUsu");      
+        ->name("padron.configUsu");
     Route::post('/actualizaUsuario', 'loginController@actualizaUsuario')
         ->name("padron.actualizaUsuario");
 
     Route::resource('transferencia', 'transferenciaController');
-    Route::post('trans/descargar', 'transferenciaController@descargar');
+    Route::post('trans/descargar', 'transferenciaController@descargarBanco');
     Route::post('trans/copiar', 'transferenciaController@copiar');
     Route::post('transBorrar/{id}', 'transferenciaController@destroy')->where('id', '[0-9]+');
-    
 });
 
 /* solo admin */
