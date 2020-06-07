@@ -1,27 +1,28 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=0">
   <title>{{$template_titulo}}</title>
   <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/product/">
-  
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
-    <script>
-        window.jQuery || document.write('<script src="/vendor/jquery/jquery.min.js"><\/script>')
-    </script>
-    <script src="{{asset('/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-    <link href="{{asset('/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    
-    <script src="{{asset('/vendor/blockui/jquery.blockUI.min.js')}}"></script>
 
-    <!--TODO: descargar select2 local-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.full.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/i18n/ar.js"></script>
-    <!-- Custom styles for this template-->
-    <link href="{{asset('/css/sb-admin-2.css')}}" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+  <script>
+    window.jQuery || document.write('<script src="/vendor/jquery/jquery.min.js"><\/script>')
+  </script>
+  <script src="{{asset('/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <link href="{{asset('/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <script src="{{asset('/vendor/blockui/jquery.blockUI.min.js')}}"></script>
+
+  <!--TODO: descargar select2 local-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.full.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/i18n/ar.js"></script>
+  <!-- Custom styles for this template-->
+  <link href="{{asset('/css/sb-admin-2.css')}}" rel="stylesheet">
   <style>
     .bd-placeholder-img {
       font-size: 1.125rem;
@@ -53,9 +54,10 @@
   <!-- Custom styles for this template -->
   <link href="https://getbootstrap.com/docs/4.3/examples/product/product.css" rel="stylesheet">
 </head>
-<?php                 
-  $usuArr = Session::get("usuario");  
+<?php
+$usuArr = Session::get("usuario");
 ?>
+
 <body id="page-top">
   <!-- Page Wrapper -->
   <div id="wrapper">
@@ -98,7 +100,7 @@
       -->
       <?php
       //TODO: implemetar tipo de 
-      $tipo =  $usuArr->tipo;      
+      $tipo =  $usuArr->tipo;
       ?>
       <!-- Nav Item - Tables -->
       @if( $tipo == 1 || $tipo == 2 )
@@ -106,10 +108,10 @@
         <a class="nav-link" href="{{ url('/transferencia') }}">
           <i class="fa fa-fw fa-table"></i>
           <span>Transferencias</span></a>
-      </li>         
+      </li>
       @endif
       @if($tipo == 1 )
-       
+
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#opadmin" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fa fa-fw fa-cog"></i>
@@ -118,7 +120,7 @@
         <div id="opadmin" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Menu:</h6>
-            <a class="collapse-item" href="{{ url('/usuario') }}">Usuarios</a>        
+            <a class="collapse-item" href="{{ url('/usuario') }}">Usuarios</a>
           </div>
         </div>
       </li>
@@ -155,7 +157,7 @@
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
 
-            <?php 
+            <?php
             /*
             ?>
             <!-- Nav Item - Search Dropdown (Visible Only XS) -->
@@ -291,7 +293,7 @@
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              
+
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ $usuArr->nombre_completo  }}</span>
                 <img class="img-profile rounded-circle" src="{{asset(Storage::url($usuArr->avatar)) }}">
               </a>
@@ -300,7 +302,7 @@
                 <a class="dropdown-item" href="{{route('padron.configUsu')}}">
                   <i class="fa fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Perfil
-                </a>                
+                </a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                   <i class="fa fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -317,20 +319,17 @@
         <!-- Begin Page Content -->
 
         <div class="container-fluid">
-        @yield('wizard')
+          @yield('wizard')
 
           <div class="col-md-12">
             <h3>{{$template_titulo}}</h3>
             <hr>
-          </div>          
-          <?php              
-            //App\Helpers\miPrint::dd(session("afiliado"),"afiliado _session2");                     
+          </div>
+          <?php
+          //App\Helpers\miPrint::dd(session("afiliado"),"afiliado _session2");                     
           ?>
-                  
           @include('comp/flash_message')
-
           @yield('contenido')
-
           @include('comp/comp_modalbox')
 
         </div>
@@ -347,10 +346,10 @@
         <hr>
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span style="font-size: 12px" >Copyright &copy; Donington - Transferencias - 2020  </span>            
+            <span style="font-size: 12px">Copyright &copy; Donington - Transferencias - 2020 </span>
           </div>
         </div>
-        <div class="float-right" style="padding-right: 30px; font-size: 10px" >v3.708</div>  
+        <div class="float-right" style="padding-right: 30px; font-size: 10px">v3.708</div>
       </footer>
       <!-- End of Footer -->
 
@@ -507,24 +506,25 @@
 
 
 <style>
+  body {
+    font-size: 0.9rem;
+  }
 
-body{
-    font-size: 0.9rem;    
-}
+  .card {
+    margin-bottom: 0.5rem;
+  }
 
-.card{
-  margin-bottom: 0.5rem;
-}
-.card-body{
-  padding:  0.50rem 0.5rem;  
-}
+  .card-body {
+    padding: 0.50rem 0.5rem;
+  }
 
-.card-header{
-  padding:  0.50rem 1.25rem;
-}
-.table{
-  margin-bottom: 0.5rem;
-}
+  .card-header {
+    padding: 0.50rem 1.25rem;
+  }
+
+  .table {
+    margin-bottom: 0.5rem;
+  }
 </style>
 
 </html>

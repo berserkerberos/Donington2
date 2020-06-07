@@ -51,7 +51,7 @@
     <div class="col-md-3">
         <div class="form-group  {{ $errors->has('importe') ? 'has-error' : ''}}">
             <label for="importe" class="control-label">{{ 'Importe' }}</label>
-            <input class="form-control" name="importe" type="number" id="importe" value="{{ isset($transferencium->importe) ? $transferencium->importe : ''}}">
+            <input class="form-control" name="importe" type="number" step="0.01" id="importe" value="{{ isset($transferencium->importe) ? $transferencium->importe : ''}}">
             {!! $errors->first('importe', '<p class="help-block">:message</p>') !!}
         </div>
     </div>

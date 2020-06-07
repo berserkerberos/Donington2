@@ -48,7 +48,7 @@ Route::group(['middleware' => "valPermisos:1_2_3"], function () {
         ->name("padron.actualizaUsuario");
 
     Route::resource('transferencia', 'transferenciaController');
-    Route::post('trans/descargar', 'transferenciaController@descargarBanco');
+    Route::match(['get', 'post'], 'trans/descargar', 'transferenciaController@descargarBanco');
     Route::post('trans/copiar', 'transferenciaController@copiar');
     Route::post('transBorrar/{id}', 'transferenciaController@destroy')->where('id', '[0-9]+');
 });

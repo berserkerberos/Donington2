@@ -1,4 +1,4 @@
-@extends('layout', ['template_titulo' => "Transferencium"])
+@extends('layout', ['template_titulo' => "Transferencia"])
 
 @section('contenido')
 <style>
@@ -90,7 +90,7 @@
                       <div class="col-sm-8">
                         <div class="btn btn-success btn-sm" id="descargar_entre"> <i class="fa fa-plus" aria-hidden="true"></i> Descargar</div>
                         <div class="btn btn-success btn-sm" id="copiar_entre"> <i class="fa fa-plus" aria-hidden="true"></i> Copiar</div>
-                        <a href="{{ url('/transferencia/create') }}" class="btn btn-success btn-sm" title="Agregar nuevo Transferencium">
+                        <a href="{{ url('/transferencia/create') }}" class="btn btn-success btn-sm" title="Agregar nuevo Transferencia">
                           <i class="fa fa-plus" aria-hidden="true"></i> Agregar nuevo
                         </a>
                       </div>
@@ -158,9 +158,9 @@
                       <td>{{ $item->titulares }}</td>
                       <td class="enUnaFila">
                         <div class="float-right">
-                          <a href="{{ url('/transferencia/' . $item->id) }}" title="View Transferencium" class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i></a>
-                          <a href="{{ url('/transferencia/' . $item->id . '/edit') }}" title="Edit Transferencium" class="btn btn-primary btn-sm"><i class="far fa-edit"></i></a>
-                          <button type="button" class="btn btn-danger btn-sm btnBorrar" data-id="{{$item->id}}" title="Delete Transferencia" onclick="return confirm('&quot;Confirma eliminar?&quot;')"><i class="far fa-trash-alt"></i></button>
+                          <a href="{{ url('/transferencia/' . $item->id) }}" title="Ver Transferencia" class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i></a>
+                          <a href="{{ url('/transferencia/' . $item->id . '/edit') }}" title="Editar Transferencia" class="btn btn-primary btn-sm"><i class="far fa-edit"></i></a>
+                          <button type="button" class="btn btn-danger btn-sm btnBorrar" data-id="{{$item->id}}" title="Borrar Transferencia" onclick="return confirm('&quot;Confirma eliminar?&quot;')"><i class="far fa-trash-alt"></i></button>
                         </div>
                       </td>
                     </tr>

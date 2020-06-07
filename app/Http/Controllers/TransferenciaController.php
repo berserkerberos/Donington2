@@ -182,6 +182,7 @@ class TransferenciaController extends Controller
   public function descargarBanco(Request $rq)
   {
     $entrega_select = $rq->get('cbEntregas');
+    $separador = $rq->get('separador');
     //$transferencias = Transferencium::where('entrega', '=', $entrega_select)->get()->toArray();
     $sql = "SELECT 
         `cbu_debito`,`cbu_credito`,`alias_cbu_debito`,`alias_cbu_credito`,
@@ -189,11 +190,16 @@ class TransferenciaController extends Controller
         FROM transferencias where entrega = '$entrega_select' ";
 
     $transferencias = \DB::select($sql);
-
+    $caracter_separador = "";
+    if (empty($separador)) {
+      $caracter_separador = "";
+    } else {
+      $caracter_separador = $separador;
+    }
     $resultado =  "";
-    $caracter_separador = ";";
     $cont = 0;
-    $importe = 0;
+    $importe = 0.00;
+    //dd($transferencias);
     foreach ($transferencias as $key => $t) {
       $cont += 1;
       $resultado .=  "" .
@@ -201,20 +207,22 @@ class TransferenciaController extends Controller
         str_pad($t->cbu_credito, 22, " ", STR_PAD_LEFT) . $caracter_separador .   // 
         str_pad($t->alias_cbu_debito, 22, " ", STR_PAD_LEFT) . $caracter_separador .   // 
         str_pad($t->alias_cbu_credito, 22, " ", STR_PAD_LEFT) . $caracter_separador .   // 
-        str_pad($t->importe, 12, " ", STR_PAD_LEFT) . $caracter_separador .   // 
+        str_pad(str_replace(".", "", number_format($t->importe, 2)), 12, " ", STR_PAD_LEFT) . $caracter_separador .   // 
         str_pad($t->concepto, 50, " ", STR_PAD_LEFT) . $caracter_separador .   // 
         str_pad($t->motivo, 3, " ", STR_PAD_LEFT) . $caracter_separador .   // 
         str_pad($t->referencia, 12, " ", STR_PAD_LEFT) . $caracter_separador .   // 
         str_pad($t->email, 50, " ", STR_PAD_LEFT) . $caracter_separador .   // 
-        str_pad($t->titulares, 124, " ", STR_PAD_LEFT) . $caracter_separador .   // 
+        str_pad($t->titulares, 1, " ", STR_PAD_LEFT) . $caracter_separador .   // 
+        str_pad("", 2, " ", STR_PAD_LEFT) . $caracter_separador .   // relleno 
         ($cont == count($transferencias) ? "" : "\r\n");
       $importe += $t->importe;
     }
-
+    //dd(str_pad(str_replace(".", "", number_format($importe, 2)), 17, " ", STR_PAD_LEFT) . $caracter_separador);
     $cabecera = "" .
       str_pad($cont, 5, " ", STR_PAD_LEFT) . $caracter_separador .   // 
-      str_pad($importe, 17, " ", STR_PAD_LEFT) . $caracter_separador .   // 
+      str_pad(str_replace(".", "", number_format($importe, 2)), 17, " ", STR_PAD_LEFT) . $caracter_separador .   // 
       str_pad("", 194, " ", STR_PAD_LEFT) . $caracter_separador .   // relleno 
+      str_pad("", 2, " ", STR_PAD_LEFT) . $caracter_separador .   // relleno 
       "\r\n";
 
     $nombreArchivo = "exportacion_" . $entrega_select . ".txt";
