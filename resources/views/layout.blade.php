@@ -369,7 +369,8 @@ $usuArr = Session::get("usuario");
 
   <!-- Custom scripts for all pages-->
   <script src="{{asset('/js/sb-admin-2.min.js')}}"></script>
-
+  <script type="text/javascript" src="{{asset('/vendor/blockui/jquery.blockUI.js')}}" ></script>
+  
 </body>
 
 

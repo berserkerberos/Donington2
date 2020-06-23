@@ -23,7 +23,6 @@
          <div class="modal-header">
            <h5 class="modal-title" id="exampleModalLabel">
              <div id="temp_titulo">
-
              </div>
            </h5>
            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
@@ -32,21 +31,12 @@
          </div>
          <div class="modal-body">
            <div id="temp_cuerpo">
-
            </div>
          </div>
          <div class="modal-footer">
            <button class="btn btn-info" id="btnModGenAceptar" type="button" data-dismiss="modal">Aceptar</button>
            <button class="btn btn-danger" id="btnModGenCancelar" type="button" data-dismiss="modal">Cancelar</button>
          </div>
-       </div>
-     </div>
-   </div>
-
-   <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-     <div class="modal-dialog modal-lg">
-       <div class="modal-content">
-         ...
        </div>
      </div>
    </div>
@@ -65,6 +55,7 @@
            </button>
          </div>
          <div class="modal-body">
+           <h2 id="frmCargando" class="text-center" >Cargando ... <i class="far fa-clock"></i></h2>
            <iframe src="" id="modalIfr" frameborder="0" style="width: 100%;min-height: 500px;">
 
            </iframe>
@@ -88,8 +79,15 @@
      };
 
      function modalIfm(titulo, url) {
+       $("#frmCargando").show();
        $("#ifrmTitulo").html(titulo)
+       $("#ifrmTitulo")
+       $("#modalIfr").hide();
        $("#modalIfr").attr("src", url)
+       $("#modalIfr").on("load",function(){
+        $("#frmCargando").hide("slow");
+        $("#modalIfr").show("slow");
+       })
        $("#modalIframe").modal()
        return $(this)
      };
