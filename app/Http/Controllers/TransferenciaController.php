@@ -202,23 +202,25 @@ class TransferenciaController extends Controller
                 str_pad(trim($t->cbu_credito), 22, " ", STR_PAD_LEFT) . $caracter_separador .   // 
                 str_pad(trim($t->alias_cbu_debito), 22, " ", STR_PAD_LEFT) . $caracter_separador .   // 
                 str_pad(trim($t->alias_cbu_credito), 22, " ", STR_PAD_LEFT) . $caracter_separador .   // 
-                str_pad(str_replace(".", "", number_format(trim($t->importe, 2))), 12, " ", STR_PAD_LEFT) . $caracter_separador .   // 
+                str_pad(str_replace(".", "", number_format(trim($t->importe), 2)), 12, "0", STR_PAD_LEFT) . $caracter_separador .   // 
                 str_pad(trim($t->concepto), 50, " ", STR_PAD_LEFT) . $caracter_separador .   // 
                 str_pad(trim($t->motivo), 3, " ", STR_PAD_LEFT) . $caracter_separador .   // 
                 str_pad(trim($t->referencia), 12, " ", STR_PAD_LEFT) . $caracter_separador .   // 
                 str_pad(trim($t->email), 50, " ", STR_PAD_LEFT) . $caracter_separador .   // 
                 str_pad(trim($t->titulares), 1, " ", STR_PAD_LEFT) . $caracter_separador .   // 
-                chr(0x0A) . $caracter_separador ;   // 
+                //chr(0x0A) . $caracter_separador ;   // segun el banco este separador no va 21/08/2020
+                "\r\n" . $caracter_separador ;   // 
                 //str_pad(, 2, "", STR_PAD_LEFT) . $caracter_separador .   // caracter de salto de linea
                 //($cont == count($transferencias) ? "" : "\r\n");
             $importe += trim($t->importe);
         }
         //dd(str_pad(str_replace(".", "", number_format($importe, 2)), 17, " ", STR_PAD_LEFT) . $caracter_separador);
         $cabecera = "" .
-            str_pad($cont, 5, "0", STR_PAD_LEFT) . $caracter_separador .   // 
-            str_pad(str_replace(".", "", number_format($importe, 2)), 17, " ", STR_PAD_LEFT) . $caracter_separador .   // 
+            str_pad($cont + 1, 5, "0", STR_PAD_LEFT) . $caracter_separador .   // 
+            str_pad(str_replace(".", "", number_format($importe, 2)), 17, "0", STR_PAD_LEFT) . $caracter_separador .   // 
             str_pad("", 194, " ", STR_PAD_LEFT) . $caracter_separador .   // relleno 
-            chr(0x0A) . $caracter_separador //.   // 
+            //chr(0x0A) . $caracter_separador //.   // segun el banco este separador no va 21/08/2020
+            "\r\n" . $caracter_separador //.   // segun el banco este separador no va 21/08/2020
             //str_pad(chr(0x0A), 2, "", STR_PAD_LEFT) . $caracter_separador    // caracter de salto de linea
             //"\r\n" 
             ;
